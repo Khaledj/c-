@@ -8,11 +8,18 @@ namespace Projet1
 {
     class Program
     {
+        private static string mot;
+
         static void Main(string[] args)
         {
-            
-            Message message = new Message(9,13,18);
-            message.GetHelloMessage();
+            do
+            {
+                Message message = new Message(new RealDateTime());
+                Console.WriteLine(message.GetHelloMessage());
+                mot = Console.ReadLine();
+            } while (mot != "exit");
+
+           
 
         }
     }
